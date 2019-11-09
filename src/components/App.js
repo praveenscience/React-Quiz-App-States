@@ -35,7 +35,7 @@ class App extends Component {
 
   render() {
     return (
-      <>
+      <div className="App">
         {this.state.QuizStatus === "New" ? (
           <QuizStartPage Questions={Questions} StartQuiz={this.StartQuiz} />
         ) : null}
@@ -54,7 +54,7 @@ class App extends Component {
             UserAnswers={this.state.UserAnswers}
           />
         ) : null}
-      </>
+      </div>
     );
   }
 }
