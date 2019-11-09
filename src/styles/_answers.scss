@@ -1,0 +1,32 @@
+.answers {
+  &,
+  & li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  li {
+    label {
+      display: block;
+      input {
+        display: none;
+        &:checked + span {
+          border-color: #55ae95;
+          background-color: #ffac8e;
+          font-weight: 600;
+        }
+      }
+      span {
+        display: block;
+        cursor: pointer;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        padding: 2px 5px;
+        &:hover {
+          border-color: #55ae95;
+          background-color: #6decb9;
+        }
+      }
+    }
+  }
+}
