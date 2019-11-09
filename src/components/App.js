@@ -6,11 +6,17 @@ class App extends Component {
   state = {
     QuizStatus: "New"
   };
+  StartQuiz = e => {
+    e.preventDefault();
+    this.setState({
+      QuizStatus: "Progress"
+    });
+  };
   render() {
     return (
       <>
         {this.state.QuizStatus === "New" ? (
-          <QuizStartPage Questions={Questions} />
+          <QuizStartPage Questions={Questions} StartQuiz={this.StartQuiz} />
         ) : null}
         {this.state.QuizStatus === "Progress"
           ? "Quiz in progress (" + Questions.length + ")."

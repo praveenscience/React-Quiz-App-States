@@ -1,7 +1,7 @@
 import React from "react";
 import Logo from "../assets/logo.svg";
 
-const QuizStartPage = ({ Questions }) => {
+const QuizStartPage = ({ Questions, StartQuiz }) => {
   return (
     <div className="container-fluid">
       <div className="row">
@@ -12,7 +12,9 @@ const QuizStartPage = ({ Questions }) => {
           <p>Quiz hasn't started yet.</p>
           <p>Quiz contains {Questions.length} questions in total.</p>
           <p>
-            <button className="btn btn-success">Start Quiz</button>
+            <button className="btn btn-success" onClick={StartQuiz}>
+              Start Quiz
+            </button>
           </p>
         </div>
       </div>
