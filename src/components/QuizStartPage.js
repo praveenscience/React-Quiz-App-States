@@ -9,8 +9,10 @@ const QuizStartPage = ({ Questions, StartQuiz }) => {
           <div className="my-2">
             <img src={Logo} alt="React Logo" />
           </div>
-          <p>Quiz hasn't started yet.</p>
-          <p>Quiz contains {Questions.length} questions in total.</p>
+          <h3>Quiz hasn't started yet.</h3>
+          <h5 className="my-3">
+            Quiz contains {Questions.length} questions in total.
+          </h5>
           <p>
             <button className="btn btn-success" onClick={StartQuiz}>
               Start Quiz
