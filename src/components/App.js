@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Questions from "../constants/questions";
 import QuizStartPage from "./QuizStartPage";
 import QuizProgress from "./QuizProgress";
+import QuizSummary from "./QuizSummary";
 
 class App extends Component {
   state = {
@@ -31,6 +32,7 @@ class App extends Component {
       this.setState({ CurrentQuestion });
     }
   };
+
   render() {
     return (
       <>
@@ -46,7 +48,12 @@ class App extends Component {
             UserAnswers={this.state.UserAnswers}
           />
         ) : null}
-        {this.state.QuizStatus === "Done" ? "Quiz is finished." : null}
+        {this.state.QuizStatus === "Done" ? (
+          <QuizSummary
+            Questions={Questions}
+            UserAnswers={this.state.UserAnswers}
+          />
+        ) : null}
       </>
     );
   }
