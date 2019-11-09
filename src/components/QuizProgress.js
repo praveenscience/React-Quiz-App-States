@@ -35,7 +35,7 @@ const QuizProgress = ({
               </li>
             ))}
           </ul>
-          {UserAnswers[CurrentQuestion] && (
+          {typeof UserAnswers[CurrentQuestion] !== "undefined" && (
             <div className="my-3 text-center">
               <button className="btn btn-success" onClick={NextQuestion}>
                 Next
