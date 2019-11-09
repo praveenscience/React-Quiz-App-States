@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import Logo from "../assets/logo.svg";
 
 const QuizProgress = ({ Questions, CurrentQuestion, SelectAnswer }) => {
+  const [UserAnswered, setUserAnswered] = useState(false);
   return (
     <div className="container-fluid">
       <div className="row">
@@ -18,7 +19,10 @@ const QuizProgress = ({ Questions, CurrentQuestion, SelectAnswer }) => {
                   <input
                     type="radio"
                     name="answer"
-                    onChange={SelectAnswer}
+                    onChange={e => {
+                      SelectAnswer(e);
+                      setUserAnswered(true);
+                    }}
                     value={key}
                   />
                   <span>{answer}</span>
@@ -26,6 +30,11 @@ const QuizProgress = ({ Questions, CurrentQuestion, SelectAnswer }) => {
               </li>
             ))}
           </ul>
+          {UserAnswered && (
+            <div className="my-3 text-center">
+              <button className="btn btn-success">Next</button>
+            </div>
+          )}
         </div>
       </div>
     </div>
