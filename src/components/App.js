@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Questions from "../constants/questions";
+import QuizStartPage from "./QuizStartPage";
 
 class App extends Component {
   state = {
@@ -8,7 +9,9 @@ class App extends Component {
   render() {
     return (
       <>
-        {this.state.QuizStatus === "New" ? "Quiz hasn't started yet." : null}
+        {this.state.QuizStatus === "New" ? (
+          <QuizStartPage Questions={Questions} />
+        ) : null}
         {this.state.QuizStatus === "Progress"
           ? "Quiz in progress (" + Questions.length + ")."
           : null}
