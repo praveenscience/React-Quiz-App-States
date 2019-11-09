@@ -20,6 +20,11 @@ class App extends Component {
     UserAnswers[this.state.CurrentQuestion] = +e.target.value;
     this.setState({ UserAnswers });
   };
+  NextQuestion = e => {
+    e.preventDefault();
+    const CurrentQuestion = this.state.CurrentQuestion + 1;
+    this.setState({ CurrentQuestion });
+  };
   render() {
     return (
       <>
@@ -31,6 +36,7 @@ class App extends Component {
             Questions={Questions}
             CurrentQuestion={this.state.CurrentQuestion}
             SelectAnswer={this.SelectAnswer}
+            NextQuestion={this.NextQuestion}
           />
         ) : null}
         {this.state.QuizStatus === "Done" ? "Quiz is finished." : null}

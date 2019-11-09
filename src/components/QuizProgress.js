@@ -1,7 +1,12 @@
 import React, { useState } from "react";
 import Logo from "../assets/logo.svg";
 
-const QuizProgress = ({ Questions, CurrentQuestion, SelectAnswer }) => {
+const QuizProgress = ({
+  Questions,
+  CurrentQuestion,
+  SelectAnswer,
+  NextQuestion
+}) => {
   const [UserAnswered, setUserAnswered] = useState(false);
   return (
     <div className="container-fluid">
@@ -32,7 +37,9 @@ const QuizProgress = ({ Questions, CurrentQuestion, SelectAnswer }) => {
           </ul>
           {UserAnswered && (
             <div className="my-3 text-center">
-              <button className="btn btn-success">Next</button>
+              <button className="btn btn-success" onClick={NextQuestion}>
+                Next
+              </button>
             </div>
           )}
         </div>
