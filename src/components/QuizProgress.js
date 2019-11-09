@@ -38,7 +38,9 @@ const QuizProgress = ({
           {typeof UserAnswers[CurrentQuestion] !== "undefined" && (
             <div className="my-3 text-center">
               <button className="btn btn-success" onClick={NextQuestion}>
-                Next
+                {CurrentQuestion + 1 === Questions.length
+                  ? "Finish Quiz"
+                  : "Next"}
               </button>
             </div>
           )}
