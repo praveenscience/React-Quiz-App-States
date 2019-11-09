@@ -15,7 +15,9 @@ const QuizProgress = ({
           <div className="my-2 text-center">
             <img src={Logo} alt="React Logo" className="w-25" />
           </div>
-          <h3>Question</h3>
+          <h3>
+            Question {CurrentQuestion + 1} of {Questions.length}
+          </h3>
           <h5>{Questions[CurrentQuestion].Question}</h5>
           <ul className="answers">
             {Questions[CurrentQuestion].Answers.map((answer, key) => (
