@@ -37,6 +37,7 @@ class App extends Component {
             CurrentQuestion={this.state.CurrentQuestion}
             SelectAnswer={this.SelectAnswer}
             NextQuestion={this.NextQuestion}
+            UserAnswers={this.state.UserAnswers}
           />
         ) : null}
         {this.state.QuizStatus === "Done" ? "Quiz is finished." : null}

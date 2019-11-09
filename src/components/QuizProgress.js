@@ -5,7 +5,8 @@ const QuizProgress = ({
   Questions,
   CurrentQuestion,
   SelectAnswer,
-  NextQuestion
+  NextQuestion,
+  UserAnswers
 }) => {
   const [UserAnswered, setUserAnswered] = useState(false);
   return (
@@ -24,6 +25,7 @@ const QuizProgress = ({
                   <input
                     type="radio"
                     name="answer"
+                    checked={key === UserAnswers[CurrentQuestion]}
                     onChange={e => {
                       SelectAnswer(e);
                       setUserAnswered(true);
