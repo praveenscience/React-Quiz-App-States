@@ -23,7 +23,13 @@ class App extends Component {
   NextQuestion = e => {
     e.preventDefault();
     const CurrentQuestion = this.state.CurrentQuestion + 1;
-    this.setState({ CurrentQuestion });
+    if (CurrentQuestion === Questions.length) {
+      this.setState({
+        QuizStatus: "Done"
+      });
+    } else {
+      this.setState({ CurrentQuestion });
+    }
   };
   render() {
     return (
