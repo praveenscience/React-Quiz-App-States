@@ -26,3 +26,10 @@ This repository contains the code for the accompanying SitePoint Blog Post [Crea
 
 ![Summary](./Screenshots/Summary.png)
 
+## Contributing
+
+Feel free to create Pull Requests. I'll try to be as much as responsive as possible and approve them.
+
+## Issues
+
+Please use the [Issue Tracker](https://github.com/praveenscience/React-Quiz-App-States/issues) to raise issues.
