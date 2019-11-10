@@ -8,6 +8,10 @@ This repository contains the code for the accompanying SitePoint Blog Post [Crea
 - Summary of all answers - correct & incorrect.
 - Next button displays only after selecting an answer.
 
+## Contents
+
+![Contents](./Contents.png)
+
 ## Screenshots
 
 **Splash Screen**
